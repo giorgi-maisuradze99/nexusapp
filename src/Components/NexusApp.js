@@ -22,6 +22,9 @@ const NexusApp = (props) => {
 
   return (
     <div className="nexus-container">
+      <header>
+        <button>Nexus</button>
+      </header>
       <Chat />
       <div className="settings-container">
         <button

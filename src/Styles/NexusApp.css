@@ -10,7 +10,22 @@
     height: 50px;
     background-color: red;
     color: white;
+    margin-top: 10px;
     
+}
+header{
+    background-color: white;
+    text-align: left;
+    height: 7.5vh;
+    box-shadow: 0px 5px 5px rgba(128, 128, 128, 0.348);
+    z-index: 100;
+}
+header button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    font-size: 25px;
+    margin-left: 30px;
 }
 body{
     background: linear-gradient(135deg,pink, orange, violet);
@@ -22,6 +37,7 @@ body{
     position: absolute;
     width: 100px;
     top: 0;
+    right: 0;
 }
 .settings-button{
     font-size: 30px;

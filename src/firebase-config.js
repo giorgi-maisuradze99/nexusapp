@@ -3,13 +3,13 @@ import { GoogleAuthProvider, getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBQjsHiS8ID0PvsvMOHuG6sACBJ1TyCrEc",
-  authDomain: "nexusapp-e9498.firebaseapp.com",
-  projectId: "nexusapp-e9498",
-  storageBucket: "nexusapp-e9498.appspot.com",
-  messagingSenderId: "429259516696",
-  appId: "1:429259516696:web:b0de131bf8d19f42df4c6d",
-  measurementId: "G-T4WGYZEL41",
+  apiKey: "AIzaSyCKoIlgY4JYgnsg70YQ6S1SUW7Jwv3Eoj4",
+  authDomain: "fir-chatapp-3a728.firebaseapp.com",
+  projectId: "fir-chatapp-3a728",
+  storageBucket: "fir-chatapp-3a728.appspot.com",
+  messagingSenderId: "374914877913",
+  appId: "1:374914877913:web:19be1c526836bf5595f1c8",
+  measurementId: "G-R1WS5X000Y",
 };
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);

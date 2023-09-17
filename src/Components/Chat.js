@@ -34,8 +34,8 @@ export const Chat = () => {
     if (newMessage === "") return;
 
     await addDoc(messagesRef, {
-      text: currentMessage.current,
       createdAt: serverTimestamp(),
+      text: newMessage,
       user: auth.currentUser.displayName,
     });
     setNewMessage("");
@@ -48,7 +48,7 @@ export const Chat = () => {
           <span key={message.id}>
             <img alt="User Photo" src={auth.currentUser.photoURL} />
             <p id="user-name">{message.user} :</p>
-            <b>{message.text}</b>
+            <h4></h4>
           </span>
         ))}
       </div>

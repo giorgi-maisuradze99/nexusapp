@@ -40,16 +40,26 @@ export const Chat = () => {
     });
     setNewMessage("");
   };
-  console.log("word");
+  console.log(auth.currentUser);
   return (
     <div className="chat-container">
       <div className="message-container">
         {messages.map((message) => (
-          <span key={message.id}>
-            <img alt="User Photo" src={auth.currentUser.photoURL} />
-            <p id="user-name">{message.user} :</p>
-            <h4></h4>
-          </span>
+          <div>
+            {auth.currentUser.displayName === message.user ? (
+              <span className="message-right">
+                <img alt="User Photo" src={auth.currentUser.photoURL} />
+                <p id="user-name">{message.user} :</p>
+                <h4>{message.text}</h4>
+              </span>
+            ) : (
+              <span>
+                <img alt="User Photo" src={auth.currentUser.photoURL} />
+                <p id="user-name">{message.user} :</p>
+                <h4>{message.text}</h4>
+              </span>
+            )}
+          </div>
         ))}
       </div>
       <form onSubmit={handleSubmit} className="new-message-form">

@@ -52,3 +52,20 @@ body{
     border: 0;
     width: 40px;
 }
+header a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    position: relative;
+    top: 25%;
+    margin-left: 20px;
+    background-color: aqua;
+    padding: 5px 10px;
+    border-radius: 500px;
+}
+header h1{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 10px;
+}

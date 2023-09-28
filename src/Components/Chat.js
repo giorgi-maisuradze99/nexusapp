@@ -13,7 +13,6 @@ import "../Styles/Chat.css";
 export const Chat = () => {
   const [newMessage, setNewMessage] = useState("");
   const [messages, setMessages] = useState([]);
-  const currentMessage = useRef("");
   const messagesRef = collection(db, "messages");
 
   useEffect(() => {
@@ -23,6 +22,7 @@ export const Chat = () => {
       snapshot.forEach((doc) => {
         messagesList.push({ ...doc.data(), id: doc.id });
       });
+      messagesList.reverse();
       setMessages(messagesList);
     });
     return () => unsubscribe();
@@ -47,11 +47,17 @@ export const Chat = () => {
         {messages.map((message) => (
           <div>
             {auth.currentUser.displayName === message.user ? (
-              <span className="message-right">
-                <img alt="User Photo" src={auth.currentUser.photoURL} />
-                <p id="user-name">{message.user} :</p>
-                <h4>{message.text}</h4>
-              </span>
+              <div>
+                <span className="message-right">
+                  <img
+                    id="right-message-img"
+                    alt="User Photo"
+                    src={auth.currentUser.photoURL}
+                  />
+                  <p id="user-name">{message.user} :</p>
+                  <h4>{message.text}</h4>
+                </span>
+              </div>
             ) : (
               <span>
                 <img alt="User Photo" src={auth.currentUser.photoURL} />

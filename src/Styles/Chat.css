@@ -21,8 +21,10 @@
     background-color: transparent;
 }
 .message-container{
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
     height: 100%;
 }
 input{
@@ -60,7 +62,20 @@ button{
 #user-name{
     margin-right: 10px;
 }
-.message-right{
-    position: absolute;
-    right: 0;
+.message-container div div{
+    display: flex;
+    justify-content: right;
+}
+.message-right {
+    padding-left: 10px;
+}
+.message-right img{
+    margin-right: 0;
+    margin-left: 10px;
+}
+.message-right #user-name{
+    display: none;
+}
+#right-message-img{
+    order: 3;
 }
